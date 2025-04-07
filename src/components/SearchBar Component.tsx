@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import { useDispatch } from "react-redux";
-import { fetchMovies } from  "../redux/movieSlice"
+import { fetchMovies } from  "../redux/movieSlice";
 
 const SearchBar: React.FC = () => {
     const [query, setquery] = useState("");
@@ -9,7 +9,7 @@ const SearchBar: React.FC = () => {
 
     const handleSearch = (e: React.FormEvent) => {
         e.preventDefault();
-        dispatch(fetchMovies());
+        dispatch(fetchMovies(query));
     };
 
 
