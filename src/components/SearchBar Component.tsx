@@ -1,11 +1,12 @@
 import React, {useState} from "react";
-import { useDispatch } from "react-redux";
+import { useAppDispatch } from "../hooks";
+// import { useDispatch } from "react-redux";
 import { fetchMovies } from  "../redux/movieSlice";
 
 const SearchBar: React.FC = () => {
     const [query, setquery] = useState("");
 
-    const dispatch = useDispatch();
+    const dispatch = useAppDispatch();
 
     const handleSearch = (e: React.FormEvent) => {
         e.preventDefault();
